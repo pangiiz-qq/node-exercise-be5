@@ -1,5 +1,5 @@
 import * as pg from "pg";
-const { Pool } = pg.default;
+const {Pool} = pg.default;
 
 // ⚠️ สำคัญ: Username และ Password จะแตกต่างกันตาม OS และวิธีการติดตั้ง PostgreSQL
 //
@@ -21,11 +21,10 @@ const { Pool } = pg.default;
 
 // แก้ไขโค้ดเพื่อให้เชื่อมต่อกับ Database ได้ข้างล่างนี้ 🔽🔽🔽
 const pool = new Pool({
-	connectionString:
-		"postgresql://<username>:<password>@<hostname>:5432/<database_name>",
+  connectionString: "postgresql://postgres:monkgal01@localhost:5432/create-a-pool-exercise",
 });
 
-export { pool };
+export {pool};
 
 // ก่อนจะเทสบน postman ให้ใช้คำสั่ง "npm run start" รันบน terminal ก่อนนะ 😄
 // ทุกครั้งที่มีการแก้ไขโค้ด ต้องรันคำสั่ง "npm run start" รันบน terminal อีกครั้ง
